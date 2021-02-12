@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Exercise</title>
+  </head>
+  <body>
+    <h1>Cart</h1>
+    <div id="cart">
+      <div class="product-item">
+        <h3 class="product-title">Product Title: Xiao Mi Air Purifier</h3>
+        <p class="product-description">
+          Product Description: Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit. Suspendisse pellentesque venenatis dolor, nec
+          faucibus diam consectetur in. Aenean suscipit a magna eget faucibus.
+          In sed orci semper.
+        </p>
+        <div class="product-price">Product Price: 250 Baht</div>
+      </div>
+      <hr />
+    </div>
+    <button class="add-product-item-btn">Add Product Item</button>
+    <script>
+      // Selectors
+      let cart = document.getElementById("cart");
+      let addProductItemButton = document.querySelector(
+        ".add-product-item-btn"
+      );
+
+      // Events
+      addProductItemButton.addEventListener("click", handleAddProductItem);
+
+      // Handlers
+      function handleAddProductItem() {
+        let productItem = document.createElement("div");
+        productItem.classList.add("product-item");
+
+        let productTitle = document.createElement("h1");
+        productItem.classList.add("product-title");
+        productTitle.textContent = "DELL Monitor";
+
+        let productDescription = document.createElement("p");
+        productDescription.classList.add("product-description");
+        productDescription.textContent =
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
+
+        let productPrice = document.createElement("div");
+        productPrice.classList.add("product-price");
+        productPrice.textContent = "30000 Baht";
+
+        let line = document.createElement("hr");
+
+        productItem.appendChild(productTitle);
+        productItem.appendChild(productDescription);
+        productItem.appendChild(productPrice);
+        productItem.appendChild(line);
+
+        cart.appendChild(productItem);
+      }
+    </script>
+  </body>
+</html>

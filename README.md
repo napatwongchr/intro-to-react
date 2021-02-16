@@ -18,5 +18,6 @@
 - [Component Design](https://github.com/napatwongchr/intro-to-react/blob/main/lessons/9-component-design.md)
 - [Styling And CSS](https://github.com/napatwongchr/intro-to-react/blob/main/lessons/10-styling-and-css.md)
 - [Asynchronous Operation](https://github.com/napatwongchr/intro-to-react/blob/main/lessons/11-asynchronous-operation.md)
-- [React Router DOM](https://github.com/napatwongchr/intro-to-react/blob/main/lessons/12-react-router-dom.md)
-- [Class Component](https://github.com/napatwongchr/intro-to-react/blob/main/lessons/13-class-component.md)
+- [Error Handling](https://github.com/napatwongchr/intro-to-react/blob/main/lessons/12-error-handling.md)
+- [React Router DOM](https://github.com/napatwongchr/intro-to-react/blob/main/lessons/13-react-router-dom.md)
+- [Class Component](https://github.com/napatwongchr/intro-to-react/blob/main/lessons/14-class-component.md)

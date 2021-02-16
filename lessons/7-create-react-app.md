@@ -18,7 +18,9 @@ npm start
 
 ## Import and Export
 
-**1. Named Import**
+เวลาเราเขียนโค้ดไปเรื่อย ๆ ไฟล์จะเริ่มใหญ่มาก ทำให้เราไม่สามารถเขียนอยู่ในไฟล์เดียวได้ เราเลยมีความจำเป็นต้องแยกไฟล์ออกมา เพื่อให้ง่ายต่อการดูแล เมื่อเราแยกไฟล์ออกมาแล้วเราจะต้องมีวิธีการที่จะ Import functions อื่น ๆ เข้ามาใช้งาน และ Export functions ต่าง ๆ ไปให้ไฟล์อื่นใช้งาน
+
+**1. Named Import & Export**
 
 ```js
 // อยู่ในไฟล์ Counter.js
@@ -45,7 +47,7 @@ function App() {
 }
 ```
 
-**2. Module Import**
+**2. Module Import & Export**
 
 ```js
 // อยู่ในไฟล์ Counter.js

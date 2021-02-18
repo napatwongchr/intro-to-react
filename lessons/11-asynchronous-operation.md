@@ -119,19 +119,23 @@ function App() {
   }
 
   return (
-    <div className="postapp-header">
-      <h1>Post App</h1>
-      <button className="postapp-header-add-button">Add Post</button>
-      {posts.map((post) => {
-        return (
-          <div className="postapp-postitem">
-            <h3 className="postitem-title">{post.title}</h3>
-            <p className="postitem-content">{post.content}</p>
-            <button className="postitem-edit-button">Edit</button>
-            <button className="postitem-delete-button">Delete</button>
-          </div>
-        );
-      })}
+    <div>
+      <div className="postapp-header">
+        <h1>Post App</h1>
+        <button className="postapp-header-add-button">Add Post</button>
+      </div>
+      <div className="postapp-postlist">
+        {posts.map((post) => {
+          return (
+            <div className="postapp-postitem">
+              <h3 className="postitem-title">{post.title}</h3>
+              <p className="postitem-content">{post.content}</p>
+              <button className="postitem-edit-button">Edit</button>
+              <button className="postitem-delete-button">Delete</button>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }

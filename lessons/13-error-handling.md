@@ -4,7 +4,7 @@
 
 <br><hr><br>
 
-## Displying Error
+## Displaying Error
 
 การ Handle Case Error จากการ Fetch ข้อมูล เราจะมี state ที่เรียกว่า `isError` และเราจะ set isError ให้เป็น null ตั้งแต่แรกเนื่องจากว่าเรายังไม่รู้ผลลัพธ์ของการ fetch
 
@@ -93,5 +93,4 @@ function App() {
 function ErrorFallback() {
   return <h3>There are some serious error happened !</h3>;
 }
-
 ```

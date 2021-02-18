@@ -35,6 +35,12 @@ function App() {
 
 <br><hr><br>
 
+## Inline Styling
+
+TBD
+
+<br><hr><br>
+
 ## CSS IN JS
 
 CSS In JS เป็น concept ที่เขียน CSS ด้วย JS ทำให้เราสามารถที่จะเขียน logic ที่มีความซับซ้อน CSS ของเราได้อย่างยืดหยุ่น เราจะแนะนำเครื่องมือที่ช่วยในการเขียน CSS ของเราด้วย concept ของ CSS in JS ก็คือ **"Emotion"**

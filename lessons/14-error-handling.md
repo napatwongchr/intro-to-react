@@ -13,7 +13,7 @@ function App() {
   const [posts, setPosts] = useState([]);
   const [isError, setIsError] = useState(null);
 
-  ...
+  // Rest of codes
 }
 ```
 

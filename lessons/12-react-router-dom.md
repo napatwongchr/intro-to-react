@@ -60,11 +60,15 @@ export default function HomePage() {
 
 ```js
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-
 import HomePage from "./pages/HomePage";
-
 import "./App.css";
 
+// Rest of codes
+```
+
+4. ทำการสร้าง router ของหน้าเว็บเราใน App component
+
+```js
 function App() {
   return (
     <div>
@@ -88,7 +92,7 @@ export default App;
   - component เป็น Page Component ที่เราจะ render
 - **Switch** เป็นตัวที่ทำให้ Component ที่จะแสดงผลใน URL นั้น ๆ สลับหน้ากัน
 
-4. ให้เราทำการสร้าง Page Component ที่ชื่อว่า `AddPostPage` ในไฟล์ `AddPostPage.js` ภายใต้ `src/pages/AddPostPage.js` จากนั้นให้เราทำการเขียน Component ง่าย ๆ
+5. ให้เราทำการสร้าง Page Component ที่ชื่อว่า `AddPostPage` ในไฟล์ `AddPostPage.js` ภายใต้ `src/pages/AddPostPage.js` จากนั้นให้เราทำการเขียน Component ง่าย ๆ
 
 ```js
 function AddPostPage() {
@@ -132,27 +136,33 @@ function App() {
 
 ## useHistory
 
-เราจะทำการ Import useHistory function มาจาก react-router-dom
+เราจะทำการ Import useHistory function มาจาก react-router-dom ภายใน HomePage.js
 
 ```js
 import { useHistory } from "react-router-dom";
 
-// Rest of codes ...
-```
-
-จากนั้นให้คิดต่อว่าเราทำการเปลี่ยน Page ตอนไหน ?​ ตอนที่เรา click ปุ่ม **"Add Post"** ให้เราทำการเขียน function `handleAddPostClick` ภายใต้ Component ซึ่งเราจะทำการเรียกใช้ Function `useHistory` ซึ่งจะ return history object มาให้เราใช้งาน ภายใน history object นั้นมี method ที่ชื่อว่า `push` ซึ่งจะรับ url string ที่เรา set ไว้ใน Route Component มันจะทำให้เราสามารถที่จะเปลี่ยน page ของเว็บเราได้
-
-```js
-let history = useHistory();
-
-// Skipped codes
-
-function handleAddPostClick() {
-  history.push("/add");
+function HomePage() {
+  // Rest of codes ...
 }
 ```
 
-แล้วนำไปใส่ใน onClick prop ของ ปุ่ม Add Post
+จากนั้นให้คิดต่อว่าเราทำการเปลี่ยน Page ตอนไหน ?​ ตอนที่เรา click ปุ่ม **"Add Post"** ให้เราทำการเขียน function `handleAddPostClick` ภายใต้ Component ซึ่งเราจะทำการเรียกใช้ Function `useHistory` ซึ่งจะ return history object มาให้เราใช้งาน ภายใน history object นั้นมี method ที่ชื่อว่า `push` ซึ่งจะรับ url string ที่เรา set ไว้ใน Route Component ซึ่งจะทำให้เราสามารถที่จะเปลี่ยน page ของเว็บเราได้
+
+```js
+import { useHistory } from "react-router-dom";
+
+function HomePage() {
+  // Skipped codes
+
+  function handleAddPostClick() {
+    history.push("/add");
+  }
+
+  // Rest of codes ...
+}
+```
+
+นำ `handleAddPostClick` ไปใส่ใน onClick prop ของ ปุ่ม Add Post
 
 ```js
 <button className="postapp-header-add-button" onClick={handleAddPostClick}>

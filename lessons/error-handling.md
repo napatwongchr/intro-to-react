@@ -80,7 +80,7 @@ React มีวิธีการรับมือกับเหตุกา�
 ตัวอย่างการใช้งาน
 
 ```js
-import {ErrorBoundary} from 'react-error-boundary'
+import { ErrorBoundary } from 'react-error-boundary'
 
 function App() {
   return (

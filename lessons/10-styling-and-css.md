@@ -37,7 +37,28 @@ function App() {
 
 ## Inline Styling
 
-TBD
+เราสามารถที่จะเขียน css แบบ inline ได้
+
+⚠️ แต่ว่า inline style นั้นจะเขียนอยู่ในรูปแบบของ Object CSS properties จะต่างจากปกติ
+
+```js
+function App() {
+  return (
+    <div style={{
+      display: "flex";
+      justifyContent: "space-between";
+      alignItems: "center";
+      padding: "0px 15px";
+      backgroundColor: "bisque";
+    }}>
+      <h1>Post App</h1>
+      <button style={{
+        height: "40px";
+      }}>Add Post</button>
+    </div>
+  );
+}
+```
 
 <br><hr><br>
 
@@ -48,3 +69,9 @@ CSS In JS เป็น concept ที่เขียน CSS ด้วย JS ท�
 <br><hr><br>
 
 ## Emotion
+
+TBD
+
+<br><hr><br>
+
+[Table of Contents](https://github.com/napatwongchr/intro-to-react/blob/main/README.md)

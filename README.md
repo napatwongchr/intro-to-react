@@ -2,7 +2,7 @@
 
 ## DOM
 
-- [How we write JavaScript on Web](https://github.com/napatwongchr/intro-to-react/blob/main/lessons/1-how-we-write-js.md)
+- w
 - [DOM](https://github.com/napatwongchr/intro-to-react/blob/main/lessons/2-dom.md)
 
 <br><hr><br>

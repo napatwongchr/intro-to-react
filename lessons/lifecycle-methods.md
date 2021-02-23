@@ -1,4 +1,4 @@
-# Lifecycle Methods
+# React Component Lifecycles
 
 Lifecycle คืออะไร ?​ ให้เรานึกถึง วงจรชีวิตของยุง เริ่มจาก ไข่ -> ลูกน้ำ -> ตัวโม่ง -> ยุงลาย ถูกมั้ยครับ 🦟 เช่นเดียวกันกับ React Component ซึ่งก็มี Lifecycle เช่นเดียวกัน เราลองมา zoom ดู Counter component กันสักหน่อย
 
@@ -33,3 +33,73 @@ Lifecycle คืออะไร ?​ ให้เรานึกถึง วง
 - ใช้เวลาเราต้องการ cancel network requests
 - ใช้ clean subscriptions
 - ใช้ clear ตัว set timer ต่าง ๆ เช่น serInterval()
+
+<br><hr><br>
+
+## ตัวอย่าง Component Lifecycles
+
+```js
+import React from "react";
+
+class Counter extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      counter: 0,
+    };
+  }
+
+  async componentDidMount() {
+    console.log("Component did mount is called");
+  }
+
+  componentDidUpdate() {
+    console.log("Component has been updated !");
+  }
+
+  componentWillUnmount() {
+    console.log("Component will unmount is called !");
+  }
+
+  handleAddCounter = () => {
+    this.setState(function (state) {
+      return {
+        counter: state.counter + 1,
+      };
+    });
+  };
+
+  handleSubtractCounter = () => {
+    this.setState(function (state) {
+      return {
+        counter: state.counter - 1,
+      };
+    });
+  };
+
+  handleResetCounter = () => {
+    this.setState(function (state) {
+      return {
+        counter: 0,
+      };
+    });
+  };
+
+  render() {
+    return (
+      <div>
+        <h1>Counter: {this.state.counter}</h1>
+        <button onClick={this.handleAddCounter}>Add</button>
+        <button onClick={this.handleSubtractCounter}>Subtract</button>
+        <button onClick={this.handleResetCounter}>Reset</button>
+      </div>
+    );
+  }
+}
+
+export default Counter;
+```
+
+<br><hr><br>
+
+[Table of Contents](https://github.com/napatwongchr/intro-to-react/blob/main/README.md)

@@ -17,16 +17,15 @@ function App() {
 }
 ```
 
-จากนั้นเราจะทำการแก้ไข `getPosts` function จำได้มั้ยว่าเรา console.log ติดไว้อยู่ถ้า response มันไม่ ok เราจะทำการ **setIsError** เข้าไปเป็น **true**
+จากนั้นเราจะทำการแก้ไข `getPosts` function จำได้มั้ยว่าเรา console.log ติดไว้อยู่ถ้า code ในบล็อกของ try มี error ออกมา มันจะเข้า catch บล็อกทันที จากนั้นมันจะ **setIsError** เข้าไปเป็น **true**
 
 ```js
 async function getPosts() {
-  let response = await fetch("http://localhost:8000/posts");
-
-  if (response.ok) {
+  try {
+    let response = await fetch("http://localhost:8000/posts");
     let { data } = await response.json();
     setPosts(data);
-  } else {
+  } catch (error) {
     setIsError(true);
   }
 }
@@ -42,16 +41,17 @@ return (
 
     {isError && <h2>Fetching data error. Please try again.</h2>}
 
-    {posts.map((post) => {
-      return (
-        <div className="postapp-postitem">
-          <h3 className="postitem-title">{post.title}</h3>
-          <p className="postitem-content">{post.content}</p>
-          <button className="postitem-edit-button">Edit</button>
-          <button className="postitem-delete-button">Delete</button>
-        </div>
-      );
-    })}
+    {!isError &&
+      posts.map((post) => {
+        return (
+          <div className="postapp-postitem">
+            <h3 className="postitem-title">{post.title}</h3>
+            <p className="postitem-content">{post.content}</p>
+            <button className="postitem-edit-button">Edit</button>
+            <button className="postitem-delete-button">Delete</button>
+          </div>
+        );
+      })}
   </div>
 );
 ```
@@ -60,22 +60,7 @@ return (
 
 ## Error Boundaries
 
-มันจะมี Error บางชนิดที่จะทำให้หน้าเว็บของเราไม่สามารถใช้งานต่อได้เลย ให้เราลองแก้ไขโค้ดตรง setPosts เป็น `setPosts(data.someThingNotFound);` แล้วลองกลับไปดูที่หน้าเว็บของเรา
-
-```js
-async function getPosts() {
-  let response = await fetch("http://localhost:8000/posts");
-
-  if (response.ok) {
-    let { data } = await response.json();
-    setPosts(data.someThingNotFound);
-  } else {
-    setIsError(true);
-  }
-}
-```
-
-React มีวิธีการรับมือกับเหตุการณ์แบบนี้ เราเรียกตัวนี้ว่า [Error Boundaries](https://github.com/bvaughn/react-error-boundary) ให้เราทำการ `npm install react-error-boundary`
+มันจะมี Error บางชนิดที่จะทำให้หน้าเว็บของเราไม่สามารถใช้งานต่อได้เลย React มีวิธีการรับมือกับเหตุการณ์แบบนี้ เราเรียกตัวนี้ว่า [Error Boundaries](https://github.com/bvaughn/react-error-boundary) ให้เราทำการ `npm install react-error-boundary`
 
 ตัวอย่างการใช้งาน
 
@@ -94,3 +79,7 @@ function ErrorFallback() {
   return <h3>There are some serious error happened !</h3>;
 }
 ```
+
+<br><hr><br>
+
+[Table of Contents](https://github.com/napatwongchr/intro-to-react/blob/main/README.md)

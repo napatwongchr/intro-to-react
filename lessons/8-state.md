@@ -5,8 +5,10 @@
 เรามาลองดู Application เล็ก ๆ กันที่เรียกว่า Counter App
 
 ```js
+import React, { useState } from "react";
+
 function App() {
-  const [number, setNumber] = React.useState(1);
+  const [number, setNumber] = useState(1);
 
   function handleAddNumber() {
     setNumber(number + 1);
@@ -94,97 +96,8 @@ A) ให้ทำการเพิ่ม Function การทำงานข�
 - Counter App สามารถที่จะ Reset Counter เป็น 0 ได้
 - Counter App สามารถที่จะ Subtract Counter ออกทีละ 1 ได้
 
-B) ให้นำข้อมูล Bills ออกมาแสดงผลผ่านหน้าเว็บ
+B) ให้นำข้อมูล Bills ออกมาแสดงผลผ่านหน้าเว็บ [(ดูข้อมูลได้ที่นี่)](https://gist.github.com/napatwongchr/8ac5740d326984ccd6700584301ecc72)
 
-```js
-const BILLS_MOCK = [
-  {
-    id: "1",
-    transactionDate: "2020-08-01",
-    total: 12345,
-    location: "Chonburi",
-    paymentType: "Cash",
-    member: {
-      name: "Tle",
-      age: "26",
-    },
-    pointRate: 0.01,
-  },
-  {
-    id: "2",
-    transactionDate: "2020-08-01",
-    total: 12298,
-    location: "Chonburi",
-    paymentType: "Cash",
-    member: {
-      name: "Tle",
-      age: "26",
-    },
-    pointRate: 0.01,
-  },
-  {
-    id: "3",
-    transactionDate: "2020-08-01",
-    total: 41012,
-    location: "Suphanburi",
-    paymentType: "Mastercard",
-    member: {
-      name: "Peter",
-      age: 33,
-    },
-    pointRate: 0.01,
-  },
-  {
-    id: "4",
-    transactionDate: "2020-08-02",
-    total: 24826,
-    location: "Trang",
-    paymentType: "MasterCard",
-    member: {
-      name: "Ball",
-      age: 31,
-    },
-    pointRate: 0.01,
-  },
-  {
-    id: "5",
-    transactionDate: "2020-08-21",
-    total: 47202,
-    location: "Trat",
-    paymentType: "VISA",
-    member: null,
-  },
-  {
-    id: "6",
-    transactionDate: "2020-08-15",
-    total: 29815,
-    location: "Lopburi",
-    paymentType: "VISA",
-    member: {
-      name: "Tle",
-      age: 26,
-    },
-    pointRate: 0.01,
-  },
-  {
-    id: "7",
-    transactionDate: "2020-08-14",
-    total: 28375,
-    location: "Chonburi",
-    paymentType: "VISA",
-    member: {
-      name: "Jak",
-      age: 36,
-    },
-    pointRate: 0.01,
-  },
-  {
-    id: "8",
-    transactionDate: "2020-08-19",
-    total: 26923,
-    location: "Chiang Mai",
-    paymentType: "QR",
-    member: null,
-  },
-];
-```
+<br><hr><br>
+
+[Table of Contents](https://github.com/napatwongchr/intro-to-react/blob/main/README.md)

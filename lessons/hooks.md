@@ -110,6 +110,47 @@ useEffect(() => {
 
 🌟 **จุดประสงค์ที่แท้จริงของ useEffect คือ การ Sync Side Effects เข้ากับ State ของ Application ของเรา**
 
+### useEffect and Component Lifecycles
+
+จริง ๆ แล้วถ้าเราถามว่า Class component มี Lifecycle methods ต่าง ๆ แล้วถ้าเราใช้แต่ Function component หล่ะ​ ?​ เราจะจัดการ Cases ที่ Class component จัดการ ได้ยังไง
+
+ตัวอย่าง
+
+```js
+import { useState, useEffect } from "react";
+
+function EffectCounter() {
+  const [counter, setCounter] = useState(0);
+
+  // Cloud compare to componentDidMount
+  useEffect(
+    function () {
+      console.log(
+        "Run this effect at the first time and run again when counter has changed"
+      );
+      return () => {
+        // Could compare to componentWillUnmount
+        console.log("Run when component will be disappear from web page");
+      };
+    },
+    [counter] // Could compare to componentDidUpdate
+  );
+
+  function handleAddCounter() {
+    setCounter(counter + 1);
+  }
+
+  return (
+    <div>
+      <h1>Counter: {counter}</h1>
+      <button onClick={handleAddCounter}>Add</button>
+    </div>
+  );
+}
+
+export default EffectCounter;
+```
+
 <br><hr><br>
 
 ## Context Hook
@@ -133,3 +174,7 @@ Reducer Hook คือ Redux แต่อยู่ในรูปแบบขอ
 ## Exercises 🏅
 
 - [Click here !](https://github.com/napatwongchr/codecamp-hook-exercises)
+
+<br><hr><br>
+
+[Table of Contents](https://github.com/napatwongchr/intro-to-react/blob/main/README.md)

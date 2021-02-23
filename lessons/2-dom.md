@@ -1,8 +1,6 @@
-# DOM
+# Document Object Model (DOM)
 
-HTML ประกอบไปด้วย Tags ต่าง ๆ แล้ว Tags มันจะถูกเก็บอยู่ในรูปแบบของ Object เราเรียกว่า **DOM**
-
-Tags จะเรียกเป็น **Node** ถ้า Tags ที่ซ้อนเข้าไปข้างในอีกทีเรียกว่า **Children**
+HTML ประกอบไปด้วย Tags ต่าง ๆ แล้ว Tags มันจะถูกเก็บอยู่ในรูปแบบของ Object และพวก Objects พวกนี้มันจะก่อร่างสร้างตัวกันเป็นรูปแบบแบบหนึ่ง เราเรียกรูปแบบนี้ว่า **Document Object Model (DOM)**
 
 JS จะสามารถ access DOM ได้ เช่น
 
@@ -37,7 +35,7 @@ document.body.style.background = "cornflowerblue";
 
 - head และ body เป็น **Siblings** กัน
 
-- h1 และ h1 เป็น **Children** ของ body
+- h1 และ h2 เป็น **Children** ของ body
 
 <br><hr><br>
 
@@ -119,9 +117,11 @@ newParagraph.appendChild(paragraphText);
 ```js
 // สร้าง element p ขึ้นมา
 let newParagraph = document.createElement("p");
+
 // ใส่ text เข้าไปใน element p
-let paragraphText = document.createTextNode("This is a nice paragraph text!");
-newParagraph.appendChild(paragraphText);
+newParagraph.textContent = "This is a nice paragraph text!";
+newParagraph.style.color = "crimson";
+newParagraph.style.fontSize = "50px";
 
 // เลือก post element มา
 let posts = document.getElementsByClassName("post");
@@ -133,7 +133,7 @@ firstPost.appendChild(newParagraph);
 
 ### Add / Remove / Toggle / Check Classes
 
-เราสามารถที่จะ Modify class attribute ของ Element นั้น ๆ ได้
+เราสามารถที่จะ modify class attribute ของ Element นั้น ๆ ได้ เพื่อทำให้ elements แสดงผลแตกต่างกันออกไปตาม css class
 
 ```js
 // เลือก post element มา
@@ -237,3 +237,7 @@ B) ให้เพิ่ม Button ขึ้นมา 1 ตัว ที่ท�
 C) ให้เพิ่ม Button ขึ้นมา 1 ตัว ที่ทำหน้าที่ Remove Product Item ออกจาก Cart ในแต่ละชิ้น
 
 D) ให้เพิ่ม Button ขึ้นมา 1 ตัว ที่ทำหน้าที่ Edit Product Title แต่ละชิ้นใน Cart
+
+<br><hr><br>
+
+[Table of Contents](https://github.com/napatwongchr/intro-to-react/blob/main/README.md)

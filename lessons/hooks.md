@@ -171,7 +171,7 @@ Reducer Hook คือ Redux แต่อยู่ในรูปแบบขอ
 
 ![Use Reducer Hook](./images/use-reduce-hook.png)
 
-## Exercises 🏅
+## Bonus Exercises 🏅
 
 - [Click here !](https://github.com/napatwongchr/codecamp-hook-exercises)
 

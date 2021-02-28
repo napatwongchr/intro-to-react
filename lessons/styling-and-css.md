@@ -39,17 +39,17 @@ function App() {
 
 เราสามารถที่จะเขียน css แบบ inline ได้
 
-⚠️ แต่ว่า inline style นั้นจะเขียนอยู่ในรูปแบบของ Object CSS properties จะต่างจากปกติ
+⚠️ แต่ว่า inline style นั้นจะเขียนอยู่ในรูปแบบของ Object css properties จะต่างจากการเขียน css แบบปกติ ซึ่งจุดนี้ทำให้ Developer experience ของเราอาจจะไม่ดีมากนักในการเขียน css
 
 ```js
 function App() {
   return (
     <div style={{
-      display: "flex";
-      justifyContent: "space-between";
-      alignItems: "center";
-      padding: "0px 15px";
-      backgroundColor: "bisque";
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center",
+      padding: "0px 15px",
+      backgroundColor: "bisque",
     }}>
       <h1>Post App</h1>
       <button style={{
@@ -120,55 +120,64 @@ export default GreetingMessage;
 
 จากนั้นให้เรา `import styled from '@emotion/styled'` แล้วเริ่มเขียน styled component ได้เลย
 
+เราจะสร้าง Styled Component ของ button กัน
+
 ```js
 import styled from "@emotion/styled";
 
-const Button = styled.button`
-  color: turquoise;
+const StyledButton = styled.button`
+  border-radius: 5px;
+  background-color: khaki;
+  height: 30px;
+  width: 100px;
+  color: crimson;
 `;
 
-function GreetingMessage() {
+// Skipped code
+
+export default App;
+```
+
+จากนั้นเราจะเปลี่ยนปุ่ม Edit, Delete ให้กลายเป็น StyledButton ของเราที่สร้างไว้
+
+```js
+function App() {
   return (
-    <div>
-      <h1
-        css={css`
-          color: cornflowerblue;
-          font-size: 50px;
-        `}
-      >
-        Hello Codecamp 8 with Emotion{" "}
-      </h1>
-      <Button>Click me</Button>
+    // Skipped codes
+    <div className="post-list">
+      <div className="post">
+        <h3>Title: Post app</h3>
+        <p>Post content</p>
+        <div className="post-footer">
+          <span>Author: John</span>
+          <div className="post-footer-buttons">
+            <StyledButton>Edit</StyledButton>
+            <StyledButton>Delete</StyledButton>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
-
-export default GreetingMessage;
 ```
 
 **เราสามารถส่ง Props เข้าไปใน Styled Component ได้ด้วย**
 
 ```js
-const Button = styled.button`
-  color: ${(props) => (props.primary ? "hotpink" : "turquoise")};
+<StyledButton primary={true}>Edit</StyledButton>
+<StyledButton>Delete</StyledButton>
+```
+
+ตัว StyledButton ของเราจะสามารถรับ Props ผ่าน String template literal ได้ จากนั้นเราจะเขียน Condition ขึ้นมาว่าถ้า primary เป็น true ก็จะให้แสดงสี crimson แต่ถ้าไม่เป็น true ให้แสดง cornflowerblue
+
+```js
+const StyledButton = styled.button`
+  border-radius: 5px;
+  background-color: khaki;
+  height: 30px;
+  width: 100px;
+  color: ${(props) => (props.primary ? "crimson" : "cornflowerblue")};
 `;
-
-// Skipped codes
-
-return (
-  <div>
-    <h1
-      css={css`
-        color: cornflowerblue;
-        font-size: 50px;
-      `}
-    >
-      Hello Codecamp 8 with Emotion{" "}
-    </h1>
-    <Button primary>Click me</Button>
-    <Button>Click me</Button>
-  </div>
-);
 ```
 
 <br><hr><br>

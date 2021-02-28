@@ -129,7 +129,7 @@ function App() {
 
 เราสามารถที่จะ Link จาก Page นึงไปอีก Page นึงได้หลายวิธี
 
-- Link ด้วย `useHistory`
+- **Link ด้วย `useHistory`**
 - Link ด้วย Link Component
 
 <br><hr><br>

@@ -17,15 +17,19 @@
 - [State](https://github.com/napatwongchr/intro-to-react/blob/main/lessons/state.md)
 - [Component Design](https://github.com/napatwongchr/intro-to-react/blob/main/lessons/component-design.md)
 - [Styling And CSS](https://github.com/napatwongchr/intro-to-react/blob/main/lessons/styling-and-css.md)
+- [Children Prop](https://github.com/napatwongchr/intro-to-react/blob/main/lessons/children-prop.md)
 - [Asynchronous Operation](https://github.com/napatwongchr/intro-to-react/blob/main/lessons/asynchronous-operation.md)
 - [React Router DOM](https://github.com/napatwongchr/intro-to-react/blob/main/lessons/react-router-dom.md)
 - [Form Handling](https://github.com/napatwongchr/intro-to-react/blob/main/lessons/form-handling.md)
 - [Component Refactoring](https://github.com/napatwongchr/intro-to-react/blob/main/lessons/component-refactoring.md)
 - [Error Handling](https://github.com/napatwongchr/intro-to-react/blob/main/lessons/error-handling.md)
+- [URL Parameters](https://github.com/napatwongchr/intro-to-react/blob/main/lessons/url-parameters.md)
 - [Class Component](https://github.com/napatwongchr/intro-to-react/blob/main/lessons/class-component.md)
 - [Component Lifecycles](https://github.com/napatwongchr/intro-to-react/blob/main/lessons/lifecycle-methods.md)
 - [Hooks](https://github.com/napatwongchr/intro-to-react/blob/main/lessons/hooks.md)
-- [Redux](https://github.com/napatwongchr/intro-to-react/blob/main/lessons/redux.md)
+- [Custom Hooks](https://github.com/napatwongchr/intro-to-react/blob/main/lessons/custom-hook.md)
+- React UI Component
+- Redux
 
 <br><hr><br>
 

@@ -2,7 +2,20 @@
 
 จากหน้า Post Home Page เรามีการแสดงข้อมูลของ Post เราจะทำการดึงของมูลของ Post จากตัว Server ที่มีการเตรียมไว้ให้เรียบร้อยแล้ว
 
-เปิด CMD หรือ Termial ขึ้นมาแล้วพิมพ์คำสั่ง `docker run -dit -p 8000:8000 --rm --name mypostapp napatwongchr/postapp` เพื่อทำการให้ Docker Generate Post App Server ขึ้นมาให้
+**วิธีการเปิด Server** สามารถเลือกได้ 2 วิธี
+
+1. **สำหรับคนที่มี Docker Desktop**
+
+- เปิด CMD หรือ Termial ขึ้นมาแล้วพิมพ์คำสั่ง `docker run -dit -p 8000:8000 --rm --name mypostapp napatwongchr/postapp` เพื่อทำการให้ Docker generate post app server ขึ้นมาให้
+
+2. **สำหรับคนที่ไม่มี Docker Desktop**
+
+- ให้ลง [Python](https://www.python.org/downloads/) ก่อน
+- ให้ไป clone repo [postapp](https://github.com/napatwongchr/postapp)
+- จากนั้นให้ cd ไปใน postapp folder แล้วทำการสร้าง virtual environment จากนั้นทำการ run คำสั่ง `python -m venv env`
+- ต่อไปให้ทำการ activate virtual environment นั้น ๆ
+  - ใน Windows ใช้คำสั่ง `env\Scripts\activate`
+  - ใน MacOS ใช้คำสั่ง `source env/bin/activate`
 
 <br><hr><br>
 
@@ -12,15 +25,17 @@
 
 **API Endpoint:** localhost:8000
 
-| Method | Path       | Description       |
-| ------ | ---------- | ----------------- |
-| GET    | /posts     | Get all posts     |
-| GET    | /posts/:id | Get post by id    |
-| POST   | /posts     | Create post       |
-| PUT    | /posts/:id | Update post by id |
-| DELETE | /posts/:id | Delete post by id |
+| Method | Path       | Description       | Request Body                                       |
+| ------ | ---------- | ----------------- | -------------------------------------------------- |
+| GET    | /posts     | Get all posts     | None                                               |
+| GET    | /posts/:id | Get post by id    | None                                               |
+| POST   | /posts/    | Create post       | { title: "post title", "content": "post content" } |
+| PUT    | /posts/:id | Update post by id | { title: "post title", "content": "post content" } |
+| DELETE | /posts/:id | Delete post by id | None                                               |
 
-API ที่เราจะเรียกใช้ก็คือ GET /posts เพราะว่าเราอยากจะได้ Posts ทั้งหมด มาแสดงผลที่หน้าเว็บของเรา
+<br>
+
+ดังนั้นในเคสนี้ API ที่เราจะเรียกใช้ก็คือ **GET /posts** เพราะว่าเราอยากจะได้ Posts ทั้งหมด มาแสดงผลที่หน้าเว็บของเรา
 
 <br><hr><br>
 

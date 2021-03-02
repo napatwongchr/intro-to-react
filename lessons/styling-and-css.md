@@ -168,7 +168,7 @@ function App() {
 <StyledButton>Delete</StyledButton>
 ```
 
-ตัว StyledButton ของเราจะสามารถรับ Props ผ่าน String template literal ได้ จากนั้นเราจะเขียน Condition ขึ้นมาว่าถ้า primary เป็น true ก็จะให้แสดงสี crimson แต่ถ้าไม่เป็น true ให้แสดง cornflowerblue
+ตัว StyledButton ของเราจะสามารถรับ Props ผ่าน String template ได้ จากนั้นเราจะเขียน Condition ขึ้นมาว่าถ้า primary เป็น true ก็จะให้แสดงสี crimson แต่ถ้าไม่เป็น true ให้แสดง cornflowerblue
 
 ```js
 const StyledButton = styled.button`

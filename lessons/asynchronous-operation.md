@@ -25,13 +25,13 @@
 
 **API Endpoint:** localhost:8000
 
-| Method | Path       | Description       | Request Body                                       |
-| ------ | ---------- | ----------------- | -------------------------------------------------- |
-| GET    | /posts     | Get all posts     | None                                               |
-| GET    | /posts/:id | Get post by id    | None                                               |
-| POST   | /posts/    | Create post       | { title: "post title", "content": "post content" } |
-| PUT    | /posts/:id | Update post by id | { title: "post title", "content": "post content" } |
-| DELETE | /posts/:id | Delete post by id | None                                               |
+| Method | Path       | Description       | Request Body                                         |
+| ------ | ---------- | ----------------- | ---------------------------------------------------- |
+| GET    | /posts     | Get all posts     | None                                                 |
+| GET    | /posts/:id | Get post by id    | None                                                 |
+| POST   | /posts/    | Create post       | { "title": "post title", "content": "post content" } |
+| PUT    | /posts/:id | Update post by id | { "title": "post title", "content": "post content" } |
+| DELETE | /posts/:id | Delete post by id | None                                                 |
 
 <br>
 

@@ -32,7 +32,9 @@ State เหมือนกับ Props ต่างกันตรงที่�
 
 ## Array Rendering
 
-เราสามารถนำ State ที่เป็น Array มาแสดงผลได้แบบนี้
+เราสามารถนำ State ที่เป็น Array มาแสดงผลบนหน้าเว็บได้ด้วย `Array.map()`
+
+⚠️ และที่สำคัญอย่าลืมใส่ key prop ให้กับ element ที่ map ออกมาแต่ละชิ้นด้วย ในที่นี้เราจะใส่ที่ `<div key={product.id} className="product-item">`
 
 ```js
 function Cart() {
@@ -41,7 +43,7 @@ function Cart() {
     <div className="cart">
       {products.map((product) => {
         return (
-          <div className="product-item">
+          <div key={product.id} className="product-item">
             <h3 class="product-title">Product Title: {product.title}</h3>
             <p class="product-description">
               <b>Product Description:</b> {product.description}

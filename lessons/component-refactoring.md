@@ -104,7 +104,3 @@ function HomePage() {
 ```
 
 <br><hr><br>
-
-## Children Prop
-
-TBD

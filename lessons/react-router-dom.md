@@ -227,4 +227,10 @@ export default function HomePage() {
 
 ## Link Component
 
-TBD
+React router dom จะมี component ที่ชื่อว่า Link ในการทำให้ย้าย pages ได้ใน React application ของเรา
+
+ตัวอย่างการใช้
+
+```js
+<Link to="/about">About</Link>
+```

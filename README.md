@@ -42,3 +42,9 @@
 - [What is API](https://github.com/napatwongchr/intro-to-javascript/blob/main/lessons/14-5-what-is-api.md)
 - [Playing With API](https://github.com/napatwongchr/intro-to-javascript/blob/main/lessons/14-6-playing-with-api.md)
 - [Fetch](https://github.com/napatwongchr/intro-to-javascript/blob/main/lessons/14-7-asynchronous-fetch.md)
+
+<br><hr><br>
+
+## React Exercises
+
+[Member management](./exercises/member-management.md)

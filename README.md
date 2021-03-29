@@ -28,7 +28,9 @@
 - [Component Lifecycles](https://github.com/napatwongchr/intro-to-react/blob/main/lessons/lifecycle-methods.md)
 - [Hooks](https://github.com/napatwongchr/intro-to-react/blob/main/lessons/hooks.md)
 - [Custom Hooks](https://github.com/napatwongchr/intro-to-react/blob/main/lessons/custom-hook.md)
-- React UI Component
+- [React UI Component](https://github.com/napatwongchr/intro-to-react/blob/main/lessons/ui-component.md)
+- [Chakra Basics](https://github.com/napatwongchr/intro-to-react/blob/main/lessons/chakra-basics.md)
+- [Building Design System With Chakra UI](https://github.com/napatwongchr/intro-to-react/blob/main/lessons/design-system-with-chakra-ui.md)
 - Redux
 
 <br><hr><br>

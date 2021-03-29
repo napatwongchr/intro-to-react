@@ -122,7 +122,11 @@ import { useState, useEffect } from "react";
 function EffectCounter() {
   const [counter, setCounter] = useState(0);
 
-  // Cloud compare to componentDidMount
+  useEffect(() => {
+    // Could compare to componentDidMount
+    console.log("Run this effect only at the first time");
+  }, []);
+
   useEffect(
     function () {
       console.log(
@@ -150,6 +154,8 @@ function EffectCounter() {
 
 export default EffectCounter;
 ```
+
+🌟 **จริงๆแล้วเราสามารถเทียบการทำงานกันได้แบบข้างบน แต่จริงๆแล้วมันทำงานคนละแบบกัน ถ้าคิดแยกจะดีกว่า**
 
 <br><hr><br>
 

@@ -44,14 +44,15 @@
 
 - [Redux](./lessons/redux.md)
 - [Redux Toolkit](./lessons/redux-toolkit.md)
+- [Asynchronous Redux With Thunk](./lessons/redux-thunk.md)
 
 <br><hr><br>
 
 ## Design System
 
-- [React UI Component](https://github.com/napatwongchr/intro-to-react/blob/main/lessons/ui-component.md)
-- [Chakra Basics](https://github.com/napatwongchr/intro-to-react/blob/main/lessons/chakra-basics.md)
-- [Building Design System With Chakra UI](https://github.com/napatwongchr/intro-to-react/blob/main/lessons/design-system-with-chakra-ui.md)
+- React UI Component
+- Chakra Basics
+- Building Design System With Chakra UI
 
 <br><hr><br>
 

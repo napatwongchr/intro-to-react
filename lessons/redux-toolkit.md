@@ -116,6 +116,63 @@ function CounterPage() {
 }
 ```
 
+6. เราสามารถที่จะ**ส่งข้อมูลไปกับ Action ได้** เราจะเพิ่ม function ให้กับ counter app ที่มีชื่อว่า `addByAmount`
+
+```js
+<Counter
+  counter={counter}
+  addCounter={() => dispatch(increment())}
+  subtractCounter={() => dispatch(decrement())}
+  resetCounter={() => dispatch(reset())}
+  addByAmount={() => dispatch(addByAmount(10))}
+/>
+```
+
+ใน component counter เราจะเพิ่มปุ่ม add by amount เข้าไป
+
+```js
+import {
+  decrement,
+  increment,
+  reset,
+  addByAmount,
+} from "../feature/counter/counterSlice";
+
+// Skipped code
+
+<div>
+  <h1>{props.counter}</h1>
+  <button onClick={props.addCounter}>add</button>
+  <button onClick={props.subtractCounter}>subtract</button>
+  <button onClick={props.resetCounter}>reset</button>
+  <button onClick={props.addByAmount}>add by amount</button>
+</div>;
+```
+
+ในตัว counterSlice เราจะเพิ่ม incrementByAmount action เข้าไป ใน reducers key
+
+```js
+export const counterSlice = createSlice({
+  name: "counter",
+  initialState: {
+    counter: 0,
+  },
+  reducers: {
+    // Skipped Code
+    addByAmount: (state, action) => {
+      state.counter += action.payload;
+    },
+  },
+});
+
+export const {
+  increment,
+  decrement,
+  reset,
+  addByAmount,
+} = counterSlice.actions;
+```
+
 <br><hr><br>
 
 ## Redux DevTools

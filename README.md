@@ -40,18 +40,18 @@
 
 <br><hr><br>
 
+## Redux
+
+- [Redux](./lessons/redux.md)
+- [Redux Toolkit](./lessons/redux-toolkit.md)
+
+<br><hr><br>
+
 ## Design System
 
 - [React UI Component](https://github.com/napatwongchr/intro-to-react/blob/main/lessons/ui-component.md)
 - [Chakra Basics](https://github.com/napatwongchr/intro-to-react/blob/main/lessons/chakra-basics.md)
 - [Building Design System With Chakra UI](https://github.com/napatwongchr/intro-to-react/blob/main/lessons/design-system-with-chakra-ui.md)
-
-<br><hr><br>
-
-## Redux
-
-- [Redux](./lessons/redux.md)
-- [Redux Toolkit](./lessons/redux-toolkit.md)
 
 <br><hr><br>
 

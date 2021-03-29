@@ -11,7 +11,7 @@ import { useEffect, useState } from "react";
 
 export function usePosts() {
   const [posts, setPosts] = useState([]);
-  const [isFetchingError, setIsFetchingError] = useState(null);
+  const [isError, setIsError] = useState(null);
 
   useEffect(() => {
     getPosts();
@@ -27,7 +27,7 @@ export function usePosts() {
     }
   }
 
-  return { posts, isFetchingError };
+  return { posts, isError };
 }
 ```
 
@@ -52,22 +52,20 @@ export function usePosts() {
 
   // Skipped code
 
-  async function deletePost(postId) {
-    let url = "http://localhost:8000/posts/" + postId;
-    let response = await fetch(url, { method: "DELETE" });
+  async function handleDeletePost(postId) {
+    let response = await fetch("http://localhost:8000/posts/" + postId, {
+      method: "DELETE",
+    });
 
     if (response.ok) {
       let newPosts = posts.filter((post) => {
         return post.id !== postId;
       });
-
       setPosts(newPosts);
-    } else {
-      console.log("Delete failed !");
     }
   }
 
-  return { posts, isFetchingError, deletePost };
+  return { posts, isError, handleDeletePost };
 }
 ```
 
@@ -85,6 +83,12 @@ function SinglePostPage() {
 export default SinglePostPage;
 ```
 
+<br><hr><br>
+
 ## Bonus Exercises 🏅
 
 ให้แสดง Post List ที่หน้า Single Post Page ด้วย Custom Hook
+
+<br><hr><br>
+
+[Table of Contents](https://github.com/napatwongchr/intro-to-react/blob/main/README.md)

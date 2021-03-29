@@ -29,3 +29,5 @@ import { Box } from "@chakra-ui/react";
 ### Inputs
 
 <br><hr><br>
+
+[Table of Contents](https://github.com/napatwongchr/intro-to-react/blob/main/README.md)

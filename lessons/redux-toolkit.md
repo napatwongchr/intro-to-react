@@ -27,7 +27,7 @@ export default configureStore({
 });
 ```
 
-**2. เชื่อมต่อ Store เข้าไปใน React App**
+**2. เชื่อมต่อ Store เข้าไปใน React App** ที่ `src/index.js`
 
 ```js
 import React from "react";
@@ -55,22 +55,22 @@ import { createSlice } from "@reduxjs/toolkit";
 export const counterSlice = createSlice({
   name: "counter",
   initialState: {
-    value: 0,
+    counter: 0,
   },
   reducers: {
     increment: (state) => {
-      state.value += 1;
+      state.counter += 1;
     },
     decrement: (state) => {
-      state.value -= 1;
+      state.counter -= 1;
     },
-    incrementByAmount: (state, action) => {
-      state.value += action.payload;
+    reset: (state) => {
+      state.counter += 0;
     },
   },
 });
 
-export const { increment, decrement, incrementByAmount } = counterSlice.actions;
+export const { increment, decrement, reset } = counterSlice.actions;
 
 export default counterSlice.reducer;
 ```
@@ -91,33 +91,37 @@ export default configureStore({
 **5. เรามาลองใช้ State และ Dispatch Action ใน Component กัน**
 
 ```js
-import React, { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { decrement, increment } from "./counterSlice";
-import styles from "./Counter.module.css";
-
-export function Counter() {
-  const count = useSelector((state) => state.counter.value);
+function CounterPage() {
+  const counter = useSelector((state) => state.counter.counter);
   const dispatch = useDispatch();
+  const [toggle, setToggle] = useState(true);
+  const history = useHistory();
 
   return (
     <div>
-      <div>
-        <button
-          aria-label="Increment value"
-          onClick={() => dispatch(increment())}
-        >
-          Increment
-        </button>
-        <span>{count}</span>
-        <button
-          aria-label="Decrement value"
-          onClick={() => dispatch(decrement())}
-        >
-          Decrement
-        </button>
-      </div>
+      <h1>Counter page</h1>
+      {toggle && (
+        <Counter
+          counter={counter}
+          addCounter={() => dispatch(increment())}
+          subtractCounter={() => dispatch(decrement())}
+          resetCounter={() => dispatch(reset())}
+        />
+      )}
+      <h1>Show Counter: {counter}</h1>
+      <button onClick={() => setToggle(!toggle)}>Toggle</button>
+      <button onClick={() => history.push("/")}>Back To Home</button>
     </div>
   );
 }
 ```
+
+<br><hr><br>
+
+## Redux DevTools
+
+Redux ทำให้เราสามารถที่จะบอกได้ว่า States ใน App ของเรานั้นเปลี่ยนแปลงได้อย่างไร ที่ไหน เมื่อไหร่ และทำไม ซึ่ง Redux จะมี Tool ที่ชื่อว่า [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd)
+
+<br><hr><br>
+
+[Table of Contents](https://github.com/napatwongchr/intro-to-react/blob/main/README.md)

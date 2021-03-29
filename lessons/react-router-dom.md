@@ -234,3 +234,7 @@ React router dom จะมี component ที่ชื่อว่า Link ใ�
 ```js
 <Link to="/about">About</Link>
 ```
+
+<br><hr><br>
+
+[Table of Contents](https://github.com/napatwongchr/intro-to-react/blob/main/README.md)

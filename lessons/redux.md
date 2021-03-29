@@ -12,19 +12,6 @@ Redux **ช่วยเราจัดการ Global States ทำให้เ
 
 <br><hr><br>
 
-## When Should Use Redux
-
-เราจะใช้ Redux ก็ต่อเมื่อ
-
-- เรามี app states เยอะมาก ๆ ที่เราจะใช้ในหลาย ๆ components ใน app เรา
-- app states เปลี่ยนแปลงตลอดเวลา
-- logic ในการ update states ซับซ้อน
-- app ของเรามีขนาดกลางไปจนถึงใหญ่มาก ๆ และทำงานกันหลายคน
-- ถ้าเราอยากเห็นภาพให้ชัด ๆ ว่า states ของเราเปลี่ยนแปลงอย่างไร เมื่อไหร่ ทำไม และที่ไหน
-- เราต้องการความสามารถในการจัดการ side effects, การทำ data persistence, data serialization
-
-<br><hr><br>
-
 ## How Redux Works
 
 ![How Redux Works](./images/how-redux-works.gif)
@@ -35,6 +22,19 @@ _Reference: https://dev.to/oahehc/redux-data-flow-and-react-component-life-cycle
 - ก่อนเข้า Store จะผ่าน Middlewares
 - จากนั้น actions จะวิ่งเข้า reducer เพื่อที่จะไปเปลี่ยนแปลง states ตาม actions ที่เกิดขึ้น
 - เมื่อ states update components ที่คอย subscribe states นั้น ๆ อยู่จะทำการ update ตัวเอง
+
+<br><hr><br>
+
+## When Should Use Redux
+
+เราจะใช้ Redux ก็ต่อเมื่อ
+
+- เรามี app states เยอะมาก ๆ ที่เราจะใช้ในหลาย ๆ components ใน app เรา
+- app states เปลี่ยนแปลงตลอดเวลา
+- logic ในการ update states ซับซ้อน
+- app ของเรามีขนาดกลางไปจนถึงใหญ่มาก ๆ และทำงานกันหลายคน
+- ถ้าเราอยากเห็นภาพให้ชัด ๆ ว่า states ของเราเปลี่ยนแปลงอย่างไร เมื่อไหร่ ทำไม และที่ไหน
+- เราต้องการความสามารถในการจัดการ side effects, การทำ data persistence, data serialization
 
 <br><hr><br>
 
@@ -57,3 +57,7 @@ _Reference: https://dev.to/oahehc/redux-data-flow-and-react-component-life-cycle
   - app ของเรามีขนาดกลางไปจนถึงใหญ่มาก ๆ และทำงานกันหลายคน
   - ถ้าเราอยากเห็นภาพให้ชัด ๆ ว่า states ของเราเปลี่ยนแปลงอย่างไร เมื่อไหร่ ทำไม และที่ไหน
   - เราต้องการความสามารถในการจัดการ side effects, การทำ data persistence, data serialization
+
+<br><hr><br>
+
+[Table of Contents](https://github.com/napatwongchr/intro-to-react/blob/main/README.md)

@@ -41,3 +41,7 @@ App ตัวนี้ประกอบไปด้วย
 **3. ข้อมูลที่เกี่ยวข้อง**
 
 เนื่องจาก Post Home Page แสดง Posts โครงสร้างข้อมูลที่เราจะเก็บจะเป็น Array ของ Post Object ซึ่ง Post Object ประกอบไปด้วยข้อมูล title, content และอาจจะมี author, published_date และเราสามารถที่จะ Add, Edit, Delete Posts ได้ ดังนั้น Posts จึงเป็น State (สีม่วง) ใน App ของเรา
+
+<br><hr><br>
+
+[Table of Contents](https://github.com/napatwongchr/intro-to-react/blob/main/README.md)

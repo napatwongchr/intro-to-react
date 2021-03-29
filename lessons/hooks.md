@@ -1,6 +1,6 @@
 # React Hooks
 
-React Hooks คือ function ที่ทำให้เราใช้ Feature ของ React ได้ใน Function component
+React Hooks คือ **function ที่ทำให้เราใช้ Feature ของ React ได้ใน Function component**
 
 <br><hr><br>
 
@@ -170,6 +170,20 @@ export default EffectCounter;
 Reducer Hook คือ Redux แต่อยู่ในรูปแบบของ Hook **เราสามารถ Update state ผ่าน Action type ได้ มีประโยชน์เวลาต้องจัดการ State เยอะ ๆ ใน Component**
 
 ![Use Reducer Hook](./images/use-reduce-hook.png)
+
+<br><hr><br>
+
+## Callback Hook
+
+TBD
+
+<br><hr><br>
+
+## Memo Hook
+
+TBD
+
+<br><hr><br>
 
 ## Bonus Exercises 🏅
 

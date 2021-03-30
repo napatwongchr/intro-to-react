@@ -50,9 +50,9 @@
 
 ## Design System
 
-- React UI Component
-- Chakra Basics
-- Building Design System With Chakra UI
+- [React UI Component](./lessons/ui-component.md)
+- [Chakra Basics](./lessons/chakra-basics.md)
+- [Building Design System With Chakra UI](./lessons/design-system-with-chakra-ui.md)
 
 <br><hr><br>
 

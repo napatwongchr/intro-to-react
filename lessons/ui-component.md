@@ -34,19 +34,18 @@ Chakra UI เป็น Component Library ตัวนึงที่มีจุ
 2. Setup ChakraProvider ในไฟล์ `index.js`
 
 ```js
-import * as React from "react";
-
-// 1. import `ChakraProvider` component
 import { ChakraProvider } from "@chakra-ui/react";
 
-function App() {
-  // 2. Use at the root of your app
-  return (
-    <ChakraProvider>
-      <App />
-    </ChakraProvider>
-  );
-}
+ReactDOM.render(
+  <React.StrictMode>
+    <Provider store={store}>
+      <ChakraProvider>
+        <App />
+      </ChakraProvider>
+    </Provider>
+  </React.StrictMode>,
+  document.getElementById("root")
+);
 ```
 
 <br><hr><br>

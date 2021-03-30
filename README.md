@@ -58,9 +58,8 @@
 
 ## Real World Form Management
 
-- Formik
-- Form Submission
-- Form Validation
+- [Basic Form](./lessons/formik.md)
+- [Form Validation](./lessons/formik-validation.md)
 
 <br><hr><br>
 
